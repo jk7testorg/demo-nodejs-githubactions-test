@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: ${APP_NAME}
-          image: ${DOCKER_IbzxfMAGE}
+          image: ${DOCKER_IMAGE}
           ports:
             - containerPort: ${APP_PORT}
           env:

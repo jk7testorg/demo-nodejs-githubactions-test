@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo-nodejs-githubactions-test
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: demo-nodejs-githubactions-test
+    sonarqube.org/project-key: demo-nodejs-githubactions-test
+    github.com/project-slug: jk7testorg/demo-nodejs-githubactions-test
+    argocd/app-name: demo-nodejs-githubactions-test-dev
+    prometheus.io/rule: "kube_pod_status_phase{pod=~'demo-nodejs-githubactions-test.*'}|phase,kube_pod_container_status_restarts_total{pod=~'demo-nodejs-githubactions-test.*'}|container"
+    prometheus.io/alert: "KubePodCrashLooping,KubeDeploymentReplicasMismatch,KubePodNotReady,KubeContainerWaiting,KubeContainerOOMKilled,KubeDeploymentRolloutStuck"
+    prometheus.io/labels: "namespace=dev"
+    grafana/overview-dashboard: 'http://34.29.242.32/grafana/d/ffuuiuytw0f0gb/backstage-view?var-pod_prefix=demo-nodejs-githubactions-test&var-namespace=dev&kiosk' 
+  tags:
+    - nodejs
+    - scaffolded
+spec:
+  type: service
+  lifecycle: Dev
+  owner: user:default/madryx
+  system: dssp-platform

@@ -8,7 +8,7 @@ metadata:
     backstage.io/kubernetes-id: ${APP_NAME}
     environment: ${NAMESPACE}
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: ${APP_NAME}

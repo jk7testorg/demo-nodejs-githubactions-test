@@ -19,5 +19,5 @@ spec:
   type: service
   lifecycle: Prod
   #owner: user:default/madryx
-  owner: group:default/development
+  owner: group:default/sample-team
   system: dssp-platform

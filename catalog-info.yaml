@@ -18,5 +18,6 @@ metadata:
 spec:
   type: service
   lifecycle: Prod
-  owner: user:default/madryx
+  #owner: user:default/madryx
+  owner: development
   system: dssp-platform

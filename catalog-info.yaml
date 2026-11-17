@@ -10,7 +10,7 @@ metadata:
     argocd/app-name: demo-nodejs-githubactions-test-prod
     prometheus.io/rule: "kube_pod_status_phase{pod=~'demo-nodejs-githubactions-test.*'}|phase,kube_pod_container_status_restarts_total{pod=~'demo-nodejs-githubactions-test.*'}|container"
     prometheus.io/alert: "KubePodCrashLooping,KubeDeploymentReplicasMismatch,KubePodNotReady,KubeContainerWaiting,KubeContainerOOMKilled,KubeDeploymentRolloutStuck"
-    prometheus.io/labels: "namespace=prod"
+    prometheus.io/labels: "namespace=uat"
     grafana/overview-dashboard: 'http://35.184.185.118/grafana/d/ffuuiuytw0f0gb/backstage-view?var-pod_prefix=demo-nodejs-githubactions-test&var-namespace=prod&kiosk' 
   tags:
     - nodejs

@@ -17,8 +17,8 @@ on:
 env:
   APP_NAME: demo-nodejs-githubactions-test
   DOCKER_IMAGE: jaykumark7/demo-nodejs-githubactions-test
-  DEPLOY_ENV: prod
-  DEPLOY_NAMESPACE: prod
+  DEPLOY_ENV: uat
+  DEPLOY_NAMESPACE: uat
   APP_PORT: "3000"
   
 permissions:

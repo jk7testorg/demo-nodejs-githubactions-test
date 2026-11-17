@@ -7,7 +7,7 @@ metadata:
     backstage.io/kubernetes-id: demo-nodejs-githubactions-test
     sonarqube.org/project-key: demo-nodejs-githubactions-test
     github.com/project-slug: jk7testorg/demo-nodejs-githubactions-test
-    argocd/app-name: demo-nodejs-githubactions-test-prod
+    argocd/app-name: demo-nodejs-githubactions-test-uat
     prometheus.io/rule: "kube_pod_status_phase{pod=~'demo-nodejs-githubactions-test.*'}|phase,kube_pod_container_status_restarts_total{pod=~'demo-nodejs-githubactions-test.*'}|container"
     prometheus.io/alert: "KubePodCrashLooping,KubeDeploymentReplicasMismatch,KubePodNotReady,KubeContainerWaiting,KubeContainerOOMKilled,KubeDeploymentRolloutStuck"
     prometheus.io/labels: "namespace=uat"
